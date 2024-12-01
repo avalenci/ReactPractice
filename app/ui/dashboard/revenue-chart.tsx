@@ -8,12 +8,10 @@ import { lusitana } from '@/app/ui/fonts';
 // https://www.chartjs.org/
 // https://airbnb.io/visx/
 
-export default async function RevenueChart({
-    dataFn,
-  }: {
+export default async function RevenueChart(props: {
     dataFn: Function;
   }) { // Make component async, remove the props
-  const revenue = await dataFn(); // Fetch data inside the component
+  const revenue = await props.dataFn(); // Fetch data inside the component
   const chartHeight = 350;
   // NOTE: Uncomment this code in Chapter 7
 
